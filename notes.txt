@@ -1,0 +1,20 @@
+search and retreive a no-images edition of the book
+transform into mycroft-readable format
+        possibly retain chapter, volume, part markers
+maintain a rolling bookmark or line-mark byte-mark or something.
+permit seek-forward-and-backward
+permit seek-to chapter, volume, part markers
+library stats (date of induction, date started reading, date completed
+
+
+future: get images and display on attached monitor/projector/display and/or "cast" to a sync'd device
+        maybe even virtual display (actually just an http server running on mycroft with some kind of streaming or refreshing)
+
+
+   17  virtualenv ./jrwarwick-gutenberg-reader-skill
+   18  pip install gutenberg
+   19  pip install --user gutenberg
+   20  python -m gutenberg.acquire.text 2701 moby-raw.txt
+   22  less moby-raw.txt 
+   23  python -m gutenberg.cleanup.strip_headers moby-raw.txt moby-clean.txt
+
